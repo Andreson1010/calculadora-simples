@@ -2,9 +2,11 @@
 def soma(a, b):
     return a + b
 
-if __name__ == "__main__":
-    print("Soma de 2 + 3 =", soma(2, 3))
-
-
 def subtracao(a, b):
     return a - b
+
+if __name__ == "__main__":
+    print("Soma de 2 + 3 =", soma(2, 3))
+    print("Subtração de 3 - 2= ", subtracao(3, 2)
+
+	
