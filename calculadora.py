@@ -1,8 +1,7 @@
  
-def soma(a, b):
-    return a + b
+def multiplicacao(a, b):
+    return a * b
 
 if __name__ == "__main__":
-    print("Soma de 2 + 3 =", soma(2, 3))
+    print("A multiplicaçãode 2 x 3 =", multiplicacao(2, 3))
 
-Meu nome é Francisco é Francisco Andreson de Lima Pinheiro
