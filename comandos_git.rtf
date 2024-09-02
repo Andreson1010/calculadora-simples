@@ -1,0 +1,235 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang22 Claro! Vamos passar por um exemplo pr\'e1tico de como usar o Git em um projeto de software simples. Vamos supor que voc\'ea est\'e1 desenvolvendo um projeto chamado "Calculadora Simples" em Python. A seguir, descrevo o passo a passo do processo de configura\'e7\'e3o e utiliza\'e7\'e3o do Git para esse projeto.\par
+\par
+### 1. **Instala\'e7\'e3o do Git**\par
+\par
+Antes de come\'e7ar, voc\'ea precisa ter o Git instalado no seu sistema. Voc\'ea pode verificar se ele est\'e1 instalado e sua vers\'e3o com o seguinte comando:\par
+\par
+```bash\par
+git --version\par
+```\par
+\par
+Se n\'e3o estiver instalado, voc\'ea pode baix\'e1-lo e instal\'e1-lo a partir do [site oficial do Git](https://git-scm.com/).\par
+\par
+### 2. **Criando o Diret\'f3rio do Projeto**\par
+\par
+Primeiro, crie um diret\'f3rio para o seu projeto "Calculadora Simples":\par
+\par
+```bash\par
+mkdir calculadora-simples\par
+cd calculadora-simples\par
+```\par
+\par
+### 3. **Inicializando um Reposit\'f3rio Git**\par
+\par
+Dentro do diret\'f3rio do projeto, inicialize um reposit\'f3rio Git:\par
+\par
+```bash\par
+git init\par
+```\par
+\par
+Isso cria um novo reposit\'f3rio Git em seu diret\'f3rio atual. Agora, o diret\'f3rio "calculadora-simples" \'e9 um reposit\'f3rio Git.\par
+\par
+### 4. **Criando o Arquivo do Projeto**\par
+\par
+Agora, crie um simples arquivo Python para a calculadora:\par
+\par
+```bash\par
+touch calculadora.py\par
+```\par
+\par
+Abra o arquivo `calculadora.py` em um editor de texto e adicione o seguinte c\'f3digo b\'e1sico:\par
+\par
+```python\par
+def soma(a, b):\par
+    return a + b\par
+\par
+if __name__ == "__main__":\par
+    print("Soma de 2 + 3 =", soma(2, 3))\par
+```\par
+\par
+### 5. **Adicionando Arquivos ao Reposit\'f3rio**\par
+\par
+Agora que voc\'ea tem um arquivo de c\'f3digo, voc\'ea precisa adicion\'e1-lo ao reposit\'f3rio Git:\par
+\par
+```bash\par
+git add calculadora.py\par
+```\par
+\par
+Este comando adiciona `calculadora.py` \'e0 \'e1rea de prepara\'e7\'e3o (staging area), preparando-o para o commit.\par
+\par
+### 6. **Criando um Commit**\par
+\par
+Agora, voc\'ea pode fazer o primeiro commit, que \'e9 um instant\'e2neo do estado do seu projeto:\par
+\par
+```bash\par
+git commit -m "Adiciona fun\'e7\'e3o de soma \'e0 calculadora"\par
+```\par
+\par
+A mensagem `-m "Adiciona fun\'e7\'e3o de soma \'e0 calculadora"` descreve as mudan\'e7as feitas no commit.\par
+\par
+### 7. **Conectando a um Reposit\'f3rio Remoto (GitHub)**\par
+\par
+Para colaborar ou manter uma c\'f3pia de backup do seu projeto online, voc\'ea pode conect\'e1-lo a um reposit\'f3rio remoto, como o GitHub.\par
+\par
+Primeiro, crie um novo reposit\'f3rio no GitHub (chame-o de "calculadora-simples").\par
+\par
+Depois, conecte o reposit\'f3rio local ao remoto:\par
+\par
+```bash\par
+git remote add origin {{\field{\*\fldinst{HYPERLINK https://github.com/seu-usuario/calculadora-simples.git }}{\fldrslt{https://github.com/seu-usuario/calculadora-simples.git\ul0\cf0}}}}\f0\fs22\par
+```\par
+\par
+Agora, voc\'ea pode enviar (push) suas mudan\'e7as para o reposit\'f3rio remoto:\par
+\par
+```bash\par
+git push -u origin main\par
+```\par
+\par
+### 8. **Continuando o Desenvolvimento**\par
+\par
+Suponha que voc\'ea queira adicionar uma nova funcionalidade \'e0 calculadora, como a subtra\'e7\'e3o:\par
+\par
+1. Modifique o arquivo `calculadora.py` para incluir uma nova fun\'e7\'e3o:\par
+\par
+```python\par
+def subtracao(a, b):\par
+    return a - b\par
+```\par
+\par
+2. Adicione as mudan\'e7as ao Git:\par
+\par
+```bash\par
+git add calculadora.py\par
+```\par
+\par
+\b 3. Fa\'e7a um commit com uma mensagem descritiva:\par
+\b0 git commit: Cria um novo commit no reposit\'f3rio Git, capturando o estado atual dos arquivos preparados.\par
+-m: Especifica que a mensagem de commit ser\'e1 fornecida diretamente na linha de comando.\par
+"Adiciona fun\'e7\'e3o de subtra\'e7\'e3o \'e0 calculadora": A mensagem que descreve as mudan\'e7as feitas no commit, facilitando o rastreamento e a compreens\'e3o do hist\'f3rico do projeto.\par
+\par
+```bash\par
+git commit -m "Adiciona fun\'e7\'e3o de subtra\'e7\'e3o \'e0 calculadora"\par
+```\par
+\par
+4. Envie as mudan\'e7as para o reposit\'f3rio remoto:\par
+\par
+```bash\par
+git push\par
+```\par
+\par
+### 9. **Trabalhando com Branches**\par
+\par
+Voc\'ea pode querer trabalhar em uma nova funcionalidade sem afetar a vers\'e3o principal do projeto. Para isso, voc\'ea pode criar uma branch:\par
+1. git checkout\par
+git checkout: Este comando \'e9 usado para alternar entre branches ou restaurar arquivos em um reposit\'f3rio. Quando usado com o nome de uma branch, ele muda para essa branch, atualizando o diret\'f3rio de trabalho para refletir o estado dessa branch.\par
+2. -b\par
+-b: Esta op\'e7\'e3o cria uma nova branch antes de mudar para ela. Em vez de apenas mudar para uma branch existente, como o comando git checkout faria normalmente, -b cria uma nova branch com o nome especificado.\par
+3. nova-funcionalidade\par
+nova-funcionalidade: Este \'e9 o nome da nova branch que ser\'e1 criada e para a qual o Git mudar\'e1. O nome da branch pode ser qualquer coisa que fa\'e7a sentido no contexto do seu projeto, e \'e9 comum usar nomes descritivos para indicar o que est\'e1 sendo feito nessa branch. Neste caso, nova-funcionalidade sugere que essa branch ser\'e1 usada para desenvolver uma nova funcionalidade no projeto.\par
+```bash\par
+git checkout -b nova-funcionalidade\par
+```\par
+\par
+Trabalhe nas mudan\'e7as nessa nova branch e, quando estiver pronto, fa\'e7a o commit e envie para o reposit\'f3rio remoto:\par
+Resumo do Comando\par
+\par
+```bash\par
+git add .\par
+git commit -m "Implementa nova funcionalidade"\par
+git push -u origin nova-funcionalidade\par
+```\par
+\par
+Depois, voc\'ea pode criar um pull request no GitHub para revisar e mesclar essa branch na branch principal (main).\par
+\par
+### 10. **Conclus\'e3o**\par
+\par
+Esse processo exemplifica um fluxo de trabalho b\'e1sico com Git, envolvendo a inicializa\'e7\'e3o de um reposit\'f3rio, o rastreamento de mudan\'e7as, a cria\'e7\'e3o de commits, a intera\'e7\'e3o com um reposit\'f3rio remoto, e o uso de branches para gerenciar o desenvolvimento de novas funcionalidades. Este \'e9 um padr\'e3o comum utilizado por desenvolvedores em todo o mundo para gerenciar o desenvolvimento de software de maneira organizada e colaborativa.\par
+\par
+\par
+Vamos considerar que voc\'ea est\'e1 trabalhando em um projeto simples chamado "Calculadora Simples" em Python, e deseja adicionar uma nova funcionalidade, como uma fun\'e7\'e3o de multiplica\'e7\'e3o. Para fazer isso sem afetar a branch principal do projeto, voc\'ea criar\'e1 uma nova branch, trabalhar\'e1 na funcionalidade e, em seguida, far\'e1 o commit e enviar\'e1 as mudan\'e7as para o reposit\'f3rio remoto.\par
+\par
+### Passo a Passo\par
+\par
+#### 1. **Criar uma Nova Branch**\par
+Primeiro, crie uma nova branch chamada `multiplicacao-funcionalidade`:\par
+\par
+```bash\par
+git checkout -b multiplicacao-funcionalidade\par
+```\par
+\par
+Agora, voc\'ea est\'e1 na branch `multiplicacao-funcionalidade`, onde desenvolver\'e1 a nova funcionalidade.\par
+\par
+#### 2. **Implementar a Nova Funcionalidade**\par
+Abra o arquivo `calculadora.py` e adicione a nova fun\'e7\'e3o de multiplica\'e7\'e3o:\par
+\par
+```python\par
+def soma(a, b):\par
+    return a + b\par
+\par
+def subtracao(a, b):\par
+    return a - b\par
+\par
+def multiplicacao(a, b):\par
+    return a * b\par
+\par
+if __name__ == "__main__":\par
+    print("Soma de 2 + 3 =", soma(2, 3))\par
+    print("Subtra\'e7\'e3o de 5 - 2 =", subtracao(5, 2))\par
+    print("Multiplica\'e7\'e3o de 4 * 3 =", multiplicacao(4, 3))\par
+```\par
+\par
+#### 3. **Adicionar as Mudan\'e7as ao Staging**\par
+Depois de fazer as altera\'e7\'f5es, adicione-as ao staging para preparar para o commit:\par
+\par
+```bash\par
+git add calculadora.py\par
+```\par
+\par
+#### 4. **Fazer o Commit das Mudan\'e7as**\par
+Crie um commit com uma mensagem descritiva sobre a nova funcionalidade:\par
+\par
+```bash\par
+git commit -m "Adiciona fun\'e7\'e3o de multiplica\'e7\'e3o \'e0 calculadora"\par
+```\par
+\par
+#### 5. **Enviar as Mudan\'e7as para o Reposit\'f3rio Remoto**\par
+Agora que a funcionalidade foi implementada e commitada na branch `multiplicacao-funcionalidade`, envie as mudan\'e7as para o reposit\'f3rio remoto:\par
+\par
+```bash\par
+git push -u origin multiplicacao-funcionalidade\par
+```\par
+\par
+Este comando cria a branch `multiplicacao-funcionalidade` no reposit\'f3rio remoto e envia suas mudan\'e7as para l\'e1.\par
+\par
+### 6. **Criar um Pull Request (Opcional)**\par
+Se voc\'ea estiver colaborando com outras pessoas no projeto e quiser que as mudan\'e7as sejam revisadas antes de serem integradas na branch principal (`main` ou `master`), voc\'ea pode criar um Pull Request no GitHub ou em outra plataforma de hospedagem Git.\par
+\par
+1. V\'e1 para a p\'e1gina do seu reposit\'f3rio no GitHub.\par
+2. Voc\'ea ver\'e1 uma notifica\'e7\'e3o sugerindo que voc\'ea crie um Pull Request para a branch rec\'e9m-enviada. Clique nela.\par
+3. Descreva as mudan\'e7as e envie o Pull Request para revis\'e3o.\par
+\par
+### 7. **Mesclar a Branch (Opcional)**\par
+Depois de revisar e aprovar o Pull Request (ou se voc\'ea estiver trabalhando sozinho), voc\'ea pode mesclar a branch `multiplicacao-funcionalidade` de volta para a branch principal (`main` ou `master`).\par
+\par
+```bash\par
+git checkout main  # Mude para a branch principal\par
+git pull origin main  # Certifique-se de que est\'e1 atualizado\par
+git merge multiplicacao-funcionalidade  # Mescle a nova funcionalidade\par
+```\par
+\par
+Agora, a nova funcionalidade de multiplica\'e7\'e3o faz parte da branch principal do projeto.\par
+\par
+### 8. **Excluir a Branch de Funcionalidade (Opcional)**\par
+Se n\'e3o precisar mais da branch `multiplicacao-funcionalidade`, voc\'ea pode exclu\'ed-la:\par
+\par
+```bash\par
+git branch -d multiplicacao-funcionalidade\par
+git push origin --delete multiplicacao-funcionalidade\par
+```\par
+\par
+Esse fluxo de trabalho \'e9 uma maneira eficaz de desenvolver novas funcionalidades sem interferir na estabilidade da branch principal do projeto.\par
+}
+ 
